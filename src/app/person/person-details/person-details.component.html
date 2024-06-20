@@ -1,0 +1,12 @@
+<img [src]="personDetails?.poster" [alt]="personDetails?.name">
+<ul>
+  <li>{{personDetails?.name}}</li>
+  <li>{{personDetails?.biography}}</li>
+  <li>{{personDetails?.birthday}}</li>
+  <li>{{personDetails?.deathday}}</li>
+  <li>{{personDetails?.place_of_birth}}</li>
+</ul>
+
+@for (personMovie of personMovies; track personMovie.id) {
+  <imbd-movie-poster [movie]="personMovie"></imbd-movie-poster>
+}

@@ -1,0 +1,7 @@
+<a routerLink="/person/{{person?.id}}">
+  <ul>
+    <img [src]='person?.poster' [alt]="person?.name">
+    <li>{{person?.name}}</li>
+    <li>{{getRole()}}</li>
+  </ul>
+</a>

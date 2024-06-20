@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { Movie } from '../movie';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'imbd-movie-poster',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './movie-poster.component.html',
   styleUrl: './movie-poster.component.css',
 })

@@ -1,2 +1,17 @@
-<h2>{{ movie.title }}</h2>
-<img [src]="movie.poster" [alt]="movie.title" />
+<a routerLink="/movie/{{movie.id}}">
+  <h2>{{ movie.title }}</h2>
+  <img [src]="movie.poster" [alt]="movie.title" />
+</a>
+<style>
+  div {
+    text-align: center;
+  }
+  img {
+    border-radius: 10px;
+    transition: transform 0.5s;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+  }
+</style>

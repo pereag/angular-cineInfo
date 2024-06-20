@@ -1,0 +1,7 @@
+@for (cast of credits?.cast; track credits?.id) {
+  <imbd-person [person]="cast"></imbd-person>
+  }
+
+@for (crew of credits?.crew; track credits?.id) {
+  <imbd-person [person]="crew"></imbd-person>
+  }
