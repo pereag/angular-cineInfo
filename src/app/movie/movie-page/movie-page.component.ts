@@ -6,6 +6,7 @@ import { MovieService } from '../movie.service';
 import { CurrencyPipe, DatePipe } from '@angular/common';
 import { Credits } from '../movie-credits/credits';
 import { MovieCreditsComponent } from "../movie-credits/movie-credits.component";
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -19,14 +20,17 @@ export class MoviePageComponent implements OnInit {
   public movie?: Movie;
   public movieCredit? : Credits;
   private movieService = inject(MovieService);
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private titleService: Title) {}
 
   ngOnInit() {
   this.route.params.pipe(
   switchMap((params: Params) => {
     return this.movieService.movie(params['id'])
   })
-  ).subscribe((value) => {this.movie = value});
+  ).subscribe((value) => {
+    this.movie = value; 
+    this.titleService.setTitle(this.movie.title);
+  });
 
   this.route.params.pipe(
     switchMap((params: Params) => {

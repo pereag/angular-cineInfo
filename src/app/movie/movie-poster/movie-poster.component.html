@@ -1,14 +1,22 @@
 <a routerLink="/movie/{{movie.id}}">
-  <h2>{{ movie.title }}</h2>
+  <div class="title_container">
+    <h2>{{ movie.title }}</h2>
+  </div>
   <img [src]="movie.poster" [alt]="movie.title" />
 </a>
 <style>
-  div {
-    text-align: center;
+  :host {
+    padding: 10px;
+  }
+  .title_container {
+    height: 160px;
+    overflow-y:hidden;
   }
   img {
+    margin-top: 10px;
     border-radius: 10px;
     transition: transform 0.5s;
+    height: 200px;
   }
 
   img:hover {

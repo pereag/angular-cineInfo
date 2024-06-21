@@ -1,0 +1,22 @@
+<input [(ngModel)]="inputValue" (keyup)="onKeyUp()"  (focus)="switchFocus()" />
+<br>
+@if(focus) {
+  <div>
+    <strong>Result: </strong>
+    <imbd-scroll>
+      @if (movies && movies.length) {
+        @for (movie of movies; track movie.id) {
+          <imbd-movie-poster [movie]="movie"></imbd-movie-poster>
+        }
+      } @else {
+        <p>Not found :(</p>
+      }
+    </imbd-scroll>
+  </div>
+}
+
+<style>
+  input {
+    color: black;
+  }
+</style>

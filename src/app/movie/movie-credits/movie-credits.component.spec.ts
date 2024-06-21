@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MovieCreditsComponent } from './movie-credits.component';
+import { ScrollComponent } from '../../comment/scroll/scroll.component';
 
 describe('MovieCreditsComponent', () => {
   let component: MovieCreditsComponent;
@@ -8,7 +9,7 @@ describe('MovieCreditsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MovieCreditsComponent]
+      imports: [MovieCreditsComponent, ScrollComponent]
     })
     .compileComponents();
     

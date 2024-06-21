@@ -1,3 +1,6 @@
-@for (movie of movies; track movie.id) {
-<imbd-movie-poster [movie]="movie" />
-}
+<imbd-scroll>
+  @for (movie of movies; track movie.id) {
+    <imbd-movie-poster [movie]="movie" />
+    }
+</imbd-scroll>
+

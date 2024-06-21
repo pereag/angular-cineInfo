@@ -7,6 +7,8 @@
   <li>{{personDetails?.place_of_birth}}</li>
 </ul>
 
+<imbd-scroll>
 @for (personMovie of personMovies; track personMovie.id) {
   <imbd-movie-poster [movie]="personMovie"></imbd-movie-poster>
 }
+</imbd-scroll>

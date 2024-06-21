@@ -1,7 +1,11 @@
+<imbd-scroll>
 @for (cast of credits?.cast; track credits?.id) {
   <imbd-person [person]="cast"></imbd-person>
   }
+</imbd-scroll>
 
+<imbd-scroll>
 @for (crew of credits?.crew; track credits?.id) {
   <imbd-person [person]="crew"></imbd-person>
   }
+</imbd-scroll>

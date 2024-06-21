@@ -7,9 +7,8 @@ export const routes: Routes = [
   {
   path: 'movie',
   children: [
-  {path: 'popular', component: PopularPageComponent},
+  {path: 'popular', component: PopularPageComponent, title: 'Popular page'},
   {path: ':id', component: MoviePageComponent},
-  // {path: ':id', component: MoviePageComponent}
   ]
   },
   {
